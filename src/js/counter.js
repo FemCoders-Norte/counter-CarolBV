@@ -14,8 +14,10 @@ function reset(){
 function decrease(){
     //Escribir tu código que resta
     const numberElement = document.getElementById('number');
-    parseInt(numberElement.textContent,10);
-    numberElement.textContent = 0;
+    let currentNumber = parseInt(numberElement.textContent,10);
+    if (currentNumber > 0) {
+        numberElement.textContent = currentNumber -1;
+    }
 }
 
 export {add, reset, decrease}
